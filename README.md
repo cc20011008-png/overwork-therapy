@@ -1,20 +1,16 @@
-# WorkHorse 职场小马 - 前端部署说明
-
-## 部署前准备
-
-1. 先部署后端，获取后端 URL
-2. 修改 `index.html` 中的 API 地址：
-   - 找到 `http://localhost:3000/api/chat`
-   - 改成 `https://your-backend.vercel.app/api/chat`
+# WorkHorse 职场小马 - 后端部署说明
 
 ## Vercel 部署步骤
 
-1. 访问 [vercel.com](https://vercel.com)
+1. 访问 [vercel.com](https://vercel.com) 注册账号
 2. 点击 "Add New" → "Project"
-3. 直接拖拽 `frontend` 文件夹
-4. 点击 "Deploy"
-5. 部署完成后得到前端 URL，分享给别人即可
+3. 选择 "Import Git Repository" 或直接拖拽 `backend` 文件夹
+4. 在 "Environment Variables" 中添加：
+   - Key: `DEEPSEEK_API_KEY`
+   - Value: `sk-582de1ddcce14d2da9df3997c0681c1d`
+5. 点击 "Deploy"
+6. 部署完成后复制 URL（如 `https://your-backend.vercel.app`）
 
-## 本地测试
+## 部署后
 
-直接用浏览器打开 `index.html` 即可。
+将后端 URL 提供给前端使用。
